@@ -1,6 +1,5 @@
 import Alert from "../src/components/Alert/Alert";
 import {
-  AlertTriangle,
   Ban,
   Bell,
   CheckCheck,
