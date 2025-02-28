@@ -1,35 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import Alert from "../src/components/Alert/Alert";
+import {
+  AlertTriangle,
+  Ban,
+  Bell,
+  CheckCheck,
+  Info,
+  Triangle,
+} from "lucide-react";
+import "./App.css";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <Alert type={"alert-error"} icon={<Ban size={20} />} title={"hello"}>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+          adipisci esse mollitia non debitis saepe, sit sapiente aperiam dolor.
+          Alias quisquam minima beatae consequatur rerum praesentium magni at
+          fugiat itaque <a href="/"> this is the link this child </a>
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </Alert>
+      <Alert
+        type={"alert-success"}
+        icon={<CheckCheck size={20} />}
+        title={"hello"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+        adipisci esse mollitia non debitis saepe, sit sapiente aperiam dolor.
+        Alias quisquam minima beatae consequatur rerum praesentium magni at
+        fugiat itaque?"
+      />
+      <Alert
+        type={"alert-info"}
+        icon={<Info size={20} />}
+        title={"hello"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+        adipisci esse mollitia non debitis saepe, sit sapiente aperiam dolor.
+        Alias quisquam minima beatae consequatur rerum praesentium magni at
+        fugiat itaque?"
+      />
+      <Alert
+        type={"alert-warning"}
+        icon={<Triangle size={20} />}
+        title={"hello"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+        adipisci esse mollitia non debitis saepe, sit sapiente aperiam dolor.
+        Alias quisquam minima beatae consequatur rerum praesentium magni at
+        fugiat itaque?"
+      />
+      <Alert
+        type={"alert-default"}
+        icon={<Bell size={20} />}
+        title={"hello"}
+        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+        adipisci esse mollitia non debitis saepe, sit sapiente aperiam dolor.
+        Alias quisquam minima beatae consequatur rerum praesentium magni at
+        fugiat itaque?"
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
