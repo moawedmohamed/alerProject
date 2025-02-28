@@ -47,7 +47,7 @@ function App() {
         fugiat itaque?"
       />
       <Alert
-        type={"alert-default"}
+        type={" alert-default"}
         icon={<Bell size={20} />}
         title={"hello"}
         description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima

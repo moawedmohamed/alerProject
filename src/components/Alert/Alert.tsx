@@ -1,21 +1,15 @@
 import { ReactNode } from "react";
 import "./Style.scss";
-import { BellRing, X } from "lucide-react";
-import { AlertTYpes } from "../../types";
+import { X } from "lucide-react";
+import { AlertTypes } from "../../types";
 export interface IProps {
-  type: AlertTYpes ;
+  type: AlertTypes;
   icon: ReactNode;
   title: string;
   description?: string;
   children?: ReactNode;
 }
-function Alert({
-  type ,
-  icon,
-  title,
-  description,
-  children,
-}: IProps) {
+function Alert({ type, icon, title, description, children }: IProps) {
   return (
     <div className={type}>
       <div className="alert-header">
